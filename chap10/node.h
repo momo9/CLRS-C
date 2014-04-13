@@ -4,11 +4,11 @@
 
 #define NODE_FREE(np)           free(np); (np) = NULL
 
-typedef int Type;
+typedef int NodeValType;
 
 typedef struct Node {
   struct Node *pPre;
-  Type val;
+  NodeValType val;
   struct Node *pPost;
 } Node;
 

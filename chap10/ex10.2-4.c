@@ -29,7 +29,7 @@ main() {
   pn = listSearch(pl, 10);
 
   uint32_t i;
-  for (i = 0; i < INT16_MAX*1000; ++i) {
+  for (i = 0; i < INT16_MAX*500; ++i) {
     listInsert(LIST_NIL(pl), 1);
   }
 

@@ -15,7 +15,7 @@ typedef struct List{
 List *listFactory();
 void listFree(List *pl);
 
-void listInsert(Node *pn, int val);
+void listInsert(Node *pn, NodeValType val);
 
 void listDelete(Node *pn);
 
@@ -23,6 +23,6 @@ void listTrav(List *pl);
 
 // return NULL when not found
 // return the node when found
-Node *listSearch(List *pl, int val);
+Node *listSearch(List *pl, NodeValType val);
 
 #endif

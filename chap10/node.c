@@ -14,7 +14,7 @@ Node *nodeFactory(int argc, ...) {
   // Node *nodeFactory(3, Node *pre, int val, Node *post)
   } else if (argc == 3) {
     pNew->pPre = va_arg(vl, Node *);
-    pNew->val = va_arg(vl, int);
+    pNew->val = va_arg(vl, NodeValType);
     pNew->pPost = va_arg(vl, Node *);
   }
   va_end(vl);

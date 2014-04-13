@@ -23,7 +23,7 @@ void listFree(List *pl){
   pl = NULL;
 }
 
-void listInsert(Node *pn, int val) {
+void listInsert(Node *pn, NodeValType val) {
   Node *pPre = pn->pPre;
   Node *pNew = nodeFactory(3, pPre, val, pn);
   pPre->pPost = pNew;
@@ -46,7 +46,7 @@ void listTrav(List *pl) {
 
 // return NULL when not found
 // return the node when found
-Node *listSearch(List *pl, int val) {
+Node *listSearch(List *pl, NodeValType val) {
   LIST_NIL(pl)->val = val;
   Node *pn;
   for (pn = LIST_FRONT(pl); pn->val != val; pn = pn->pPost);
