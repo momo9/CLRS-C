@@ -57,3 +57,15 @@ Node *listSearch(List *pl, NodeValType val) {
   }
   return (pn == LIST_NIL(pl)) ? NULL : pn;
 }
+
+// exercise 10.2-6
+// pl1 is the union
+void listUnion(List *pl1, List *pl2) {
+  LIST_BACK(pl1)->pPost = LIST_FRONT(pl2);
+  LIST_FRONT(pl2)->pPre = LIST_BACK(pl1);
+  LIST_BACK(pl2)->pPost = LIST_NIL(pl1);
+  LIST_NIL(pl1)->pPre = LIST_BACK(pl2);
+  // empty pl2, but didn't free it
+  // otherwies whether free it later is confused
+  LIST_NIL(pl2)->pPre = LIST_NIL(pl2)->pPost = LIST_NIL(pl2);
+}

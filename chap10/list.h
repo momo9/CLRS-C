@@ -7,6 +7,8 @@
 #define LIST_FRONT(pl)          (pl)->pNil->pPost
 #define LIST_BACK(pl)           (pl)->pNil->pPre
 
+#define LIST_PUSH_BACK(pl, v)   listInsert(LIST_NIL(pl), (v))
+
 typedef struct List{
   Node *pNil;
 } List;
@@ -24,5 +26,9 @@ void listTrav(List *pl);
 // return NULL when not found
 // return the node when found
 Node *listSearch(List *pl, NodeValType val);
+
+// exercise 10.2-6
+// pl1 is the union
+void listUnion(List *pl1, List *pl2);
 
 #endif
