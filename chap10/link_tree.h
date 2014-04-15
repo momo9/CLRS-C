@@ -25,4 +25,5 @@ LinkTree *treeFactory(NodeValType valRoot);
 void treeFree(LinkTree *pt);
 
 void nodePrint(TreeNode *pn);
+void treePrintNonRecur(LinkTree *pt);
 #endif

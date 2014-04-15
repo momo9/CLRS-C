@@ -1,5 +1,6 @@
 #include "link_tree.h"
 #include "tool.h"
+#include "stack.h"
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -36,4 +37,17 @@ void nodePrint(TreeNode *pn) {
   PUTD(pn->val);
   if (pn->pLeft) nodePrint(pn->pLeft);
   if (pn->pRight) nodePrint(pn->pRight);
+}
+
+void treePrintNonRecur(LinkTree *pt) {
+  Stack *ps = stackFactory();
+  STACK_PUSH(ps, pt->pRoot);
+  while (! STACK_IS_EMPTY(ps)) {
+    TreeNode *pn = STACK_POP(ps);
+    PUTD(pn->val);
+    if (pn->pLeft) STACK_PUSH(ps, pn->pLeft);
+    if (pn->pRight) STACK_PUSH(ps, pn->pRight);
+  }
+  STACK_FREE(ps);
+  puts("");
 }
