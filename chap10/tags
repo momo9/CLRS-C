@@ -1,0 +1,116 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALLOC_ONE	tool.h	6;"	d
+LINK_TREE_H	link_tree.h	2;"	d
+LIST_BACK	list.h	8;"	d
+LIST_FREE	list.h	5;"	d
+LIST_FRONT	list.h	7;"	d
+LIST_H	list.h	2;"	d
+LIST_NIL	list.h	6;"	d
+LIST_PUSH_BACK	list.h	10;"	d
+LinkTree	link_tree.h	/^typedef struct LinkTree {$/;"	s
+LinkTree	link_tree.h	/^} LinkTree;$/;"	t	typeref:struct:LinkTree
+LinkTree::pRoot	link_tree.h	/^  TreeNode *pRoot;$/;"	m	struct:LinkTree	access:public
+List	list.h	/^typedef struct List{$/;"	s
+List	list.h	/^} List;$/;"	t	typeref:struct:List
+List::pNil	list.h	/^  Node *pNil;$/;"	m	struct:List	access:public
+N	ex10.3-5.c	5;"	d	file:
+NODE_FREE	node.h	5;"	d
+NODE_H	node.h	2;"	d
+Node	node.h	/^typedef struct Node {$/;"	s
+Node	node.h	/^} Node;$/;"	t	typeref:struct:Node
+Node::pPost	node.h	/^  struct Node *pPost;$/;"	m	struct:Node	typeref:struct:Node::Node	access:public
+Node::pPre	node.h	/^  struct Node *pPre;$/;"	m	struct:Node	typeref:struct:Node::Node	access:public
+Node::val	node.h	/^  NodeValType val;$/;"	m	struct:Node	access:public
+NodeValType	link_tree.h	/^typedef int NodeValType;$/;"	t
+NodeValType	node.h	/^typedef int NodeValType;$/;"	t
+OBJECTS	makefile	/^OBJECTS = ex10.4-3.o tool.o link_tree.o stack.o$/;"	m
+PUTD	tool.h	4;"	d
+PUTDLN	tool.h	5;"	d
+SIZE	ex10.3-4.c	4;"	d	file:
+SIZE	ex10.3-5.c	4;"	d	file:
+STACK_FREE	stack.h	7;"	d
+STACK_H	stack.h	2;"	d
+STACK_IS_EMPTY	stack.h	10;"	d
+STACK_POP	stack.h	9;"	d
+STACK_PUSH	stack.h	8;"	d
+STACK_SIZE	stack.h	6;"	d
+Stack	stack.h	/^typedef struct Stack {$/;"	s
+Stack	stack.h	/^} Stack;$/;"	t	typeref:struct:Stack
+Stack::container	stack.h	/^  StackValType container[STACK_SIZE];$/;"	m	struct:Stack	access:public
+Stack::top	stack.h	/^  int top;$/;"	m	struct:Stack	access:public
+StackValType	stack.h	/^typedef TreeNode *StackValType;$/;"	t
+TARGET	makefile	/^TARGET = ex10.4-3.out$/;"	m
+TOOL_H	tool.h	2;"	d
+TREE_PRINT	link_tree.h	4;"	d
+TreeNode	link_tree.h	/^typedef struct TreeNode {$/;"	s
+TreeNode	link_tree.h	/^} TreeNode;$/;"	t	typeref:struct:TreeNode
+TreeNode::pLeft	link_tree.h	/^  struct TreeNode *pLeft;$/;"	m	struct:TreeNode	typeref:struct:TreeNode::TreeNode	access:public
+TreeNode::pPar	link_tree.h	/^  struct TreeNode *pPar;$/;"	m	struct:TreeNode	typeref:struct:TreeNode::TreeNode	access:public
+TreeNode::pRight	link_tree.h	/^  struct TreeNode *pRight;$/;"	m	struct:TreeNode	typeref:struct:TreeNode::TreeNode	access:public
+TreeNode::val	link_tree.h	/^  NodeValType val;$/;"	m	struct:TreeNode	access:public
+alloc	ex10.3-4.c	/^int alloc(int *pFree, int post[]) {$/;"	f	signature:(int *pFree, int post[])
+alloc	ex10.3-4.c	/^int alloc(int *pFree, int post[]);$/;"	p	file:	signature:(int *pFree, int post[])
+compactify	ex10.3-5.c	/^void compactify(int pre[], int post[], int isFree[], int *pList, int *pFree) {$/;"	f	signature:(int pre[], int post[], int isFree[], int *pList, int *pFree)
+compactify	ex10.3-5.c	/^void compactify(int pre[], int post[], int isFree[], int *pList, int *pFree);$/;"	p	file:	signature:(int pre[], int post[], int isFree[], int *pList, int *pFree)
+container	stack.h	/^  StackValType container[STACK_SIZE];$/;"	m	struct:Stack	access:public
+listDelete	list.c	/^void listDelete(Node *pn) {$/;"	f	signature:(Node *pn)
+listDelete	list.h	/^void listDelete(Node *pn);$/;"	p	signature:(Node *pn)
+listFactory	list.c	/^List *listFactory() {$/;"	f
+listFactory	list.h	/^List *listFactory();$/;"	p	signature:()
+listFree	list.c	/^void listFree(List *pl){$/;"	f	signature:(List *pl)
+listFree	list.h	/^void listFree(List *pl);$/;"	p	signature:(List *pl)
+listInsert	list.c	/^void listInsert(Node *pn, NodeValType val) {$/;"	f	signature:(Node *pn, NodeValType val)
+listInsert	list.h	/^void listInsert(Node *pn, NodeValType val);$/;"	p	signature:(Node *pn, NodeValType val)
+listSearch	list.c	/^Node *listSearch(List *pl, NodeValType val) {$/;"	f	signature:(List *pl, NodeValType val)
+listSearch	list.h	/^Node *listSearch(List *pl, NodeValType val);$/;"	p	signature:(List *pl, NodeValType val)
+listTrav	list.c	/^void listTrav(List *pl) {$/;"	f	signature:(List *pl)
+listTrav	list.h	/^void listTrav(List *pl);$/;"	p	signature:(List *pl)
+listUnion	list.c	/^void listUnion(List *pl1, List *pl2) {$/;"	f	signature:(List *pl1, List *pl2)
+listUnion	list.h	/^void listUnion(List *pl1, List *pl2);$/;"	p	signature:(List *pl1, List *pl2)
+main	ex10.2-4.c	/^main() {$/;"	f
+main	ex10.2-6.c	/^main() {$/;"	f
+main	ex10.3-4.c	/^main() {$/;"	f
+main	ex10.3-5.c	/^main() {$/;"	f
+main	ex10.4-2.c	/^main() {$/;"	f
+main	ex10.4-3.c	/^main() {$/;"	f
+myfree	ex10.3-4.c	/^void myfree(int x, int *pFree, int post[]) {$/;"	f	signature:(int x, int *pFree, int post[])
+myfree	ex10.3-4.c	/^void myfree(int x, int *pFree, int post[]);$/;"	p	file:	signature:(int x, int *pFree, int post[])
+nodeFactory	link_tree.c	/^TreeNode *nodeFactory(TreeNode *pPar, TreeNode *pLeft, TreeNode *pRight, NodeValType val) {$/;"	f	signature:(TreeNode *pPar, TreeNode *pLeft, TreeNode *pRight, NodeValType val)
+nodeFactory	link_tree.h	/^TreeNode *nodeFactory(TreeNode *pPar, TreeNode *pLeft, TreeNode *pRight, NodeValType val); $/;"	p	signature:(TreeNode *pPar, TreeNode *pLeft, TreeNode *pRight, NodeValType val)
+nodeFactory	node.c	/^Node *nodeFactory(int argc, ...) {$/;"	f	signature:(int argc, ...)
+nodeFactory	node.h	/^Node *nodeFactory (int argc, ...);$/;"	p	signature:(int argc, ...)
+nodeFree	link_tree.c	/^void nodeFree(TreeNode *pn) {$/;"	f	signature:(TreeNode *pn)
+nodeFree	link_tree.h	/^void nodeFree(TreeNode *pn);$/;"	p	signature:(TreeNode *pn)
+nodePrint	link_tree.c	/^void nodePrint(TreeNode *pn) {$/;"	f	signature:(TreeNode *pn)
+nodePrint	link_tree.h	/^void nodePrint(TreeNode *pn);$/;"	p	signature:(TreeNode *pn)
+pLeft	link_tree.h	/^  struct TreeNode *pLeft;$/;"	m	struct:TreeNode	typeref:struct:TreeNode::TreeNode	access:public
+pNil	list.h	/^  Node *pNil;$/;"	m	struct:List	access:public
+pPar	link_tree.h	/^  struct TreeNode *pPar;$/;"	m	struct:TreeNode	typeref:struct:TreeNode::TreeNode	access:public
+pPost	node.h	/^  struct Node *pPost;$/;"	m	struct:Node	typeref:struct:Node::Node	access:public
+pPre	node.h	/^  struct Node *pPre;$/;"	m	struct:Node	typeref:struct:Node::Node	access:public
+pRight	link_tree.h	/^  struct TreeNode *pRight;$/;"	m	struct:TreeNode	typeref:struct:TreeNode::TreeNode	access:public
+pRoot	link_tree.h	/^  TreeNode *pRoot;$/;"	m	struct:LinkTree	access:public
+printFree	ex10.3-4.c	/^void printFree(int free, int post[]) {$/;"	f	signature:(int free, int post[])
+printFree	ex10.3-4.c	/^void printFree(int free, int post[]);$/;"	p	file:	signature:(int free, int post[])
+stackFactory	stack.c	/^Stack *stackFactory() {$/;"	f
+stackFactory	stack.h	/^Stack *stackFactory();$/;"	p	signature:()
+stackPrint	stack.c	/^void stackPrint(Stack *ps) {$/;"	f	signature:(Stack *ps)
+stackPrint	stack.h	/^void stackPrint(Stack *ps);$/;"	p	signature:(Stack *ps)
+swap	tool.c	/^void swap(int *a, int *b) {$/;"	f	signature:(int *a, int *b)
+swap	tool.h	/^void swap(int *a, int *b);$/;"	p	signature:(int *a, int *b)
+top	stack.h	/^  int top;$/;"	m	struct:Stack	access:public
+trav	ex10.3-5.c	/^void trav(int beg, int post[]) {$/;"	f	signature:(int beg, int post[])
+trav	ex10.3-5.c	/^void trav(int beg, int post[]);$/;"	p	file:	signature:(int beg, int post[])
+treeFactory	link_tree.c	/^LinkTree *treeFactory(NodeValType valRoot) {$/;"	f	signature:(NodeValType valRoot)
+treeFactory	link_tree.h	/^LinkTree *treeFactory(NodeValType valRoot);$/;"	p	signature:(NodeValType valRoot)
+treeFree	link_tree.c	/^void treeFree(LinkTree *pt) {$/;"	f	signature:(LinkTree *pt)
+treeFree	link_tree.h	/^void treeFree(LinkTree *pt);$/;"	p	signature:(LinkTree *pt)
+treePrintNonRecur	link_tree.c	/^void treePrintNonRecur(LinkTree *pt) {$/;"	f	signature:(LinkTree *pt)
+treePrintNonRecur	link_tree.h	/^void treePrintNonRecur(LinkTree *pt);$/;"	p	signature:(LinkTree *pt)
+val	link_tree.h	/^  NodeValType val;$/;"	m	struct:TreeNode	access:public
+val	node.h	/^  NodeValType val;$/;"	m	struct:Node	access:public

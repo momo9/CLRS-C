@@ -1,0 +1,99 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALLOC_ONE	tool.h	6;"	d
+DELETE	ex11.1-2.c	9;"	d	file:
+HASH	hash_table.h	8;"	d
+HASH	open_hash.h	5;"	d
+HASH_SIZE	hash_table.h	7;"	d
+HASH_TABLE_H	hash_table.h	2;"	d
+HashTable	hash_table.h	/^typedef struct HashTable {$/;"	s
+HashTable	hash_table.h	/^} HashTable;$/;"	t	typeref:struct:HashTable
+HashTable::table	hash_table.h	/^  List *table[HASH_SIZE];$/;"	m	struct:HashTable	access:public
+INSERT	ex11.1-2.c	8;"	d	file:
+LIST_BACK	list.h	8;"	d
+LIST_FREE	list.h	5;"	d
+LIST_FRONT	list.h	7;"	d
+LIST_H	list.h	2;"	d
+LIST_NIL	list.h	6;"	d
+LIST_PUSH_BACK	list.h	10;"	d
+List	list.h	/^typedef struct List{$/;"	s
+List	list.h	/^} List;$/;"	t	typeref:struct:List
+List::pNil	list.h	/^  Node *pNil;$/;"	m	struct:List	access:public
+NODE_FREE	node.h	5;"	d
+NODE_H	node.h	2;"	d
+Node	node.h	/^typedef struct Node {$/;"	s
+Node	node.h	/^} Node;$/;"	t	typeref:struct:Node
+Node::pPost	node.h	/^  struct Node *pPost;$/;"	m	struct:Node	typeref:struct:Node::Node	access:public
+Node::pPre	node.h	/^  struct Node *pPre;$/;"	m	struct:Node	typeref:struct:Node::Node	access:public
+Node::val	node.h	/^  NodeValType val;$/;"	m	struct:Node	access:public
+NodeValType	node.h	/^typedef int NodeValType;$/;"	t
+OBJECTS	makefile	/^OBJECTS = ex11.4-2.o tool.o open_hash.o$/;"	m
+OPEN_HASH_FREE	open_hash.h	6;"	d
+OPEN_HASH_H	open_hash.h	2;"	d
+OPEN_HASH_SIZE	open_hash.h	4;"	d
+OpenHash	open_hash.h	/^typedef struct OpenHash {$/;"	s
+OpenHash	open_hash.h	/^} OpenHash;$/;"	t	typeref:struct:OpenHash
+OpenHash::deleted	open_hash.h	/^  char deleted[OPEN_HASH_SIZE];$/;"	m	struct:OpenHash	access:public
+OpenHash::table	open_hash.h	/^  int table[OPEN_HASH_SIZE];$/;"	m	struct:OpenHash	access:public
+PUTD	tool.h	4;"	d
+PUTDLN	tool.h	5;"	d
+SEARCH	ex11.1-2.c	7;"	d	file:
+SIZE	ex11.1-2.c	5;"	d	file:
+TARGET	makefile	/^TARGET = ex11.4-2.out$/;"	m
+TOOL_H	tool.h	2;"	d
+deleted	open_hash.h	/^  char deleted[OPEN_HASH_SIZE];$/;"	m	struct:OpenHash	access:public
+hashDelete	hash_table.c	/^void hashDelete(Node *pn) {$/;"	f	signature:(Node *pn)
+hashDelete	hash_table.h	/^void hashDelete(Node *pn);$/;"	p	signature:(Node *pn)
+hashFactory	hash_table.c	/^HashTable *hashFactory() {$/;"	f
+hashFactory	hash_table.h	/^HashTable *hashFactory();$/;"	p	signature:()
+hashFree	hash_table.c	/^void hashFree(HashTable **ppht) {$/;"	f	signature:(HashTable **ppht)
+hashFree	hash_table.h	/^void hashFree(HashTable **ppht);$/;"	p	signature:(HashTable **ppht)
+hashInsert	hash_table.c	/^void hashInsert(HashTable *pht, NodeValType val) {$/;"	f	signature:(HashTable *pht, NodeValType val)
+hashInsert	hash_table.h	/^void hashInsert(HashTable *pht, NodeValType val);$/;"	p	signature:(HashTable *pht, NodeValType val)
+hashPrint	hash_table.c	/^void hashPrint(HashTable *pht) {$/;"	f	signature:(HashTable *pht)
+hashPrint	hash_table.h	/^void hashPrint(HashTable *pht);$/;"	p	signature:(HashTable *pht)
+hashSearch	hash_table.c	/^Node *hashSearch(HashTable *pht, NodeValType val) {$/;"	f	signature:(HashTable *pht, NodeValType val)
+hashSearch	hash_table.h	/^Node *hashSearch(HashTable *pht, NodeValType val);$/;"	p	signature:(HashTable *pht, NodeValType val)
+listDelete	list.c	/^void listDelete(Node *pn) {$/;"	f	signature:(Node *pn)
+listDelete	list.h	/^void listDelete(Node *pn);$/;"	p	signature:(Node *pn)
+listFactory	list.c	/^List *listFactory() {$/;"	f
+listFactory	list.h	/^List *listFactory();$/;"	p	signature:()
+listFree	list.c	/^void listFree(List **ppl){$/;"	f	signature:(List **ppl)
+listFree	list.h	/^void listFree(List **ppl);$/;"	p	signature:(List **ppl)
+listInsert	list.c	/^void listInsert(Node *pn, NodeValType val) {$/;"	f	signature:(Node *pn, NodeValType val)
+listInsert	list.h	/^void listInsert(Node *pn, NodeValType val);$/;"	p	signature:(Node *pn, NodeValType val)
+listSearch	list.c	/^Node *listSearch(List *pl, NodeValType val) {$/;"	f	signature:(List *pl, NodeValType val)
+listSearch	list.h	/^Node *listSearch(List *pl, NodeValType val);$/;"	p	signature:(List *pl, NodeValType val)
+listTrav	list.c	/^void listTrav(List *pl) {$/;"	f	signature:(List *pl)
+listTrav	list.h	/^void listTrav(List *pl);$/;"	p	signature:(List *pl)
+listUnion	list.c	/^void listUnion(List *pl1, List *pl2) {$/;"	f	signature:(List *pl1, List *pl2)
+listUnion	list.h	/^void listUnion(List *pl1, List *pl2);$/;"	p	signature:(List *pl1, List *pl2)
+main	ex11.1-2.c	/^main() {$/;"	f
+main	ex11.2-4.c	/^main() {$/;"	f
+main	ex11.4-2.c	/^main() {$/;"	f
+nodeFactory	node.c	/^Node *nodeFactory(int argc, ...) {$/;"	f	signature:(int argc, ...)
+nodeFactory	node.h	/^Node *nodeFactory (int argc, ...);$/;"	p	signature:(int argc, ...)
+openHashDelete	open_hash.c	/^void openHashDelete(OpenHash *poh, int pos) {$/;"	f	signature:(OpenHash *poh, int pos)
+openHashDelete	open_hash.h	/^void openHashDelete(OpenHash *poh, int pos);$/;"	p	signature:(OpenHash *poh, int pos)
+openHashFactory	open_hash.c	/^OpenHash *openHashFactory() {$/;"	f
+openHashFactory	open_hash.h	/^OpenHash *openHashFactory();$/;"	p	signature:()
+openHashInsert	open_hash.c	/^void openHashInsert(OpenHash *poh, int key) {$/;"	f	signature:(OpenHash *poh, int key)
+openHashInsert	open_hash.h	/^void openHashInsert(OpenHash *poh, int key);$/;"	p	signature:(OpenHash *poh, int key)
+openHashPrint	open_hash.c	/^void openHashPrint(OpenHash *poh) {$/;"	f	signature:(OpenHash *poh)
+openHashPrint	open_hash.h	/^void openHashPrint(OpenHash *poh);$/;"	p	signature:(OpenHash *poh)
+openHashSearch	open_hash.c	/^int openHashSearch(OpenHash *poh, int key) {$/;"	f	signature:(OpenHash *poh, int key)
+openHashSearch	open_hash.h	/^int openHashSearch(OpenHash *poh, int key);$/;"	p	signature:(OpenHash *poh, int key)
+pNil	list.h	/^  Node *pNil;$/;"	m	struct:List	access:public
+pPost	node.h	/^  struct Node *pPost;$/;"	m	struct:Node	typeref:struct:Node::Node	access:public
+pPre	node.h	/^  struct Node *pPre;$/;"	m	struct:Node	typeref:struct:Node::Node	access:public
+swap	tool.c	/^void swap(int *a, int *b) {$/;"	f	signature:(int *a, int *b)
+swap	tool.h	/^void swap(int *a, int *b);$/;"	p	signature:(int *a, int *b)
+table	hash_table.h	/^  List *table[HASH_SIZE];$/;"	m	struct:HashTable	access:public
+table	open_hash.h	/^  int table[OPEN_HASH_SIZE];$/;"	m	struct:OpenHash	access:public
+trav	ex11.1-2.c	/^void trav(uint8_t bv[]) {$/;"	f	signature:(uint8_t bv[])
+trav	ex11.1-2.c	/^void trav(uint8_t bv[]);$/;"	p	file:	signature:(uint8_t bv[])
+val	node.h	/^  NodeValType val;$/;"	m	struct:Node	access:public
