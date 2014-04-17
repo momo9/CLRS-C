@@ -1,0 +1,54 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALLOC_ONE	tool.h	6;"	d
+ARRAY_TREE_H	array_tree.h	2;"	d
+ArrayTree	array_tree.h	/^typedef struct ArrayTree {$/;"	s
+ArrayTree	array_tree.h	/^} ArrayTree;$/;"	t	typeref:struct:ArrayTree
+ArrayTree::tree	array_tree.h	/^  TypeTreeVal tree[TREE_SIZE];$/;"	m	struct:ArrayTree	access:public
+ArrayTree::valid	array_tree.h	/^  char valid[TREE_SIZE];$/;"	m	struct:ArrayTree	access:public
+OBJECTS	makefile	/^OBJECTS = $(TAR_OBJ) tool.o array_tree.o$/;"	m
+PUTD	tool.h	4;"	d
+PUTDLN	tool.h	5;"	d
+TARGET	makefile	/^TARGET = ex12.2-3.out$/;"	m
+TAR_OBJ	makefile	/^TAR_OBJ = ex12.2-3.o$/;"	m
+TOOL_H	tool.h	2;"	d
+TREE_FREE	array_tree.h	6;"	d
+TREE_LEFT	array_tree.h	9;"	d
+TREE_PAR	array_tree.h	8;"	d
+TREE_RIGHT	array_tree.h	10;"	d
+TREE_SIZE	array_tree.h	4;"	d
+TypeTreeVal	array_tree.h	/^typedef int TypeTreeVal;$/;"	t
+findMax	array_tree.c	/^int findMax(ArrayTree *pt, int pos) {$/;"	f	signature:(ArrayTree *pt, int pos)
+findMax	array_tree.h	/^int findMax(ArrayTree *pt, int pos);$/;"	p	signature:(ArrayTree *pt, int pos)
+findMin	array_tree.c	/^TypeTreeVal findMin(ArrayTree *pt, int pos) {$/;"	f	signature:(ArrayTree *pt, int pos)
+findMin	array_tree.h	/^int findMin(ArrayTree *pt, int pos);$/;"	p	signature:(ArrayTree *pt, int pos)
+findMostLeft	array_tree.c	/^int findMostLeft(ArrayTree *pt) {$/;"	f	signature:(ArrayTree *pt)
+findMostLeft	array_tree.h	/^int findMostLeft(ArrayTree *pt);$/;"	p	signature:(ArrayTree *pt)
+findMostRight	array_tree.c	/^int findMostRight(ArrayTree *pt) {$/;"	f	signature:(ArrayTree *pt)
+findMostRight	array_tree.h	/^int findMostRight(ArrayTree *pt);$/;"	p	signature:(ArrayTree *pt)
+findPost	array_tree.c	/^int findPost(ArrayTree *pt, int pos);$/;"	p	file:	signature:(ArrayTree *pt, int pos)
+findPost	array_tree.h	/^int findPost(ArrayTree *pt, int pos);$/;"	p	signature:(ArrayTree *pt, int pos)
+findPre	array_tree.c	/^int findPre(ArrayTree *pt, int pos) {$/;"	f	signature:(ArrayTree *pt, int pos)
+findPre	array_tree.h	/^int findPre(ArrayTree *pt, int pos);$/;"	p	signature:(ArrayTree *pt, int pos)
+isValid	array_tree.c	/^int isValid(ArrayTree *pt, int pos) {$/;"	f	signature:(ArrayTree *pt, int pos)
+isValid	array_tree.h	/^int isValid(ArrayTree *pt, int pos);$/;"	p	signature:(ArrayTree *pt, int pos)
+main	ex12.1-3.c	/^main() {$/;"	f
+main	ex12.2-3.c	/^main() {$/;"	f
+swap	tool.c	/^void swap(int *a, int *b) {$/;"	f	signature:(int *a, int *b)
+swap	tool.h	/^void swap(int *a, int *b);$/;"	p	signature:(int *a, int *b)
+tree	array_tree.h	/^  TypeTreeVal tree[TREE_SIZE];$/;"	m	struct:ArrayTree	access:public
+treeDelete	array_tree.c	/^void treeDelete(ArrayTree *pt, int pos) {$/;"	f	signature:(ArrayTree *pt, int pos)
+treeDelete	array_tree.h	/^void treeDelete(ArrayTree *pt, int pos);$/;"	p	signature:(ArrayTree *pt, int pos)
+treeFactory	array_tree.c	/^ArrayTree *treeFactory() {$/;"	f
+treeFactory	array_tree.h	/^ArrayTree *treeFactory();$/;"	p	signature:()
+treeInsert	array_tree.c	/^void treeInsert(ArrayTree *pt, TypeTreeVal val, int pos) {$/;"	f	signature:(ArrayTree *pt, TypeTreeVal val, int pos)
+treeInsert	array_tree.h	/^void treeInsert(ArrayTree *pt, TypeTreeVal val, int pos);$/;"	p	signature:(ArrayTree *pt, TypeTreeVal val, int pos)
+treeSearch	array_tree.c	/^int treeSearch(ArrayTree *pt, TypeTreeVal val) {$/;"	f	signature:(ArrayTree *pt, TypeTreeVal val)
+treeSearch	array_tree.h	/^int treeSearch(ArrayTree *pt, TypeTreeVal val);$/;"	p	signature:(ArrayTree *pt, TypeTreeVal val)
+valid	array_tree.h	/^  char valid[TREE_SIZE];$/;"	m	struct:ArrayTree	access:public
+walkNonRecur	array_tree.c	/^void walkNonRecur(ArrayTree *pt) {$/;"	f	signature:(ArrayTree *pt)
+walkNonRecur	array_tree.h	/^void walkNonRecur(ArrayTree *pt);$/;"	p	signature:(ArrayTree *pt)
