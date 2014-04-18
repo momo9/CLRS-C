@@ -1,0 +1,14 @@
+#include <tr1/memory>
+#include <iostream>
+#include "tree_node.h"
+
+typedef std::tr1::shared_ptr<TreeNode> pNode;
+
+int main(int argc, char *argv[]) {
+
+  //pNode pn(new TreeNode);
+  TreeNode *pn = new TreeNode;
+  delete pn;
+
+  return 0;
+}
