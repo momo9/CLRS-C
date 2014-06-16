@@ -127,3 +127,47 @@ void puttree_nostack(TreeNode *proot) {
     pleft = proot->left;
   }
 }
+
+void treemin(TreeNode *p, KeyType *k) {
+  static KeyType keybuf;
+
+  if (p->left != NULL) {
+    treemin(p->left, NULL);
+  } else {
+    keycpy(&keybuf, p->ptrkey);
+  }
+
+  if (k != NULL) {
+    keycpy(k, &keybuf);
+  }
+}
+void treemax(TreeNode *p, KeyType *k) {
+  static KeyType keybuf;
+
+  if (p->right != NULL) {
+    treemax(p->right, NULL);
+  } else {
+    keycpy(&keybuf, p->ptrkey);
+  }
+
+  if (k != NULL) {
+    keycpy(k, &keybuf);
+  }
+}
+
+TreeNode *nodemin(TreeNode *p) {
+  if (p->left == NULL) {
+    return p;
+  }
+  return nodemin(p->left);
+}
+TreeNode *nodemax(TreeNode *p) {
+  if (p->right == NULL) {
+    return p;
+  }
+  return nodemax(p->right);
+}
+
+void putnode(TreeNode *n) {
+  keyput(n);
+}

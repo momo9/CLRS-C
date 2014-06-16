@@ -23,4 +23,12 @@ void puttree_nostack(TreeNode *proot);
 
 TreeNode *freenode(TreeNode *proot);
 
+void treemin(TreeNode *p, KeyType *k);
+void treemax(TreeNode *p, KeyType *k);
+
+TreeNode *nodemin(TreeNode *p);
+TreeNode *nodemax(TreeNode *p);
+
+void putnode(TreeNode *n);
+
 #endif
