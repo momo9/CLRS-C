@@ -1,12 +1,20 @@
-TARGET = ex12.3-1.out
-TAR_OBJ = ex12.3-1.o
-OBJECTS = $(TAR_OBJ) tree_node.o ptr_tree.o
+TAR=12-1-3.out
+OBJ=treenode.o 12-1-3.o stack.o
+FLAG=-Wall -g
 
-$(TARGET): $(OBJECTS)
-	cc -o $(TARGET) $(OBJECTS) -lstdc++
+$(TAR): $(OBJ)
+	cc -o $(TAR) $(OBJ) $(FLAG)
 
-$(TAR_OBJ): tool.h ptr_tree.h
-ptr_tree.o: ptr_tree.h tree_node.h
-tree_node.o: tree_node.h
-tool.o: tool.h
-array_tree.o: array_tree.h tool.h 
+12-1-3.o: treenode.h 12-1-3.c
+	cc -c 12-1-3.c $(FLAG)
+
+treenode.o: treenode.h stack.h treenode.c
+	cc -c treenode.c $(FLAG)
+
+stack.o: stack.h stack.c
+	cc -c stack.c $(FLAG)
+
+.PHONY: clean
+
+clean:
+	rm *.o *.out
