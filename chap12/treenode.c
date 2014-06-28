@@ -217,3 +217,71 @@ TreeNode *successor(TreeNode *pn) {
     return NULL;
   }
 }
+
+// return the root
+TreeNode *replace(TreeNode *proot, TreeNode *dst, TreeNode *src) {
+  // if (NULL != src) {
+  //   fprintf(stderr, "src: %d\n", *src->ptrkey);
+  // }
+  // if (NULL != dst) {
+  //   fprintf(stderr, "dst: %d\n", *dst->ptrkey);
+  // }
+  if (dst->par == NULL) {
+    // dst is root
+    free(dst->ptrkey);
+    free(dst);
+    if (NULL != src) {
+      src->par = NULL;
+    }
+    return src;
+  }
+  if (NULL != src) {
+    src->par = dst->par;
+    // fprintf(stderr, "par: %d\n", *src->par->ptrkey);
+  }
+  if (dst->par->left == dst) {
+    dst->par->left = src;
+  } else {
+    dst->par->right = src;
+  }
+  free(dst->ptrkey);
+  free(dst);
+  return proot;
+}
+
+// return the root
+TreeNode *delnode(TreeNode *proot, TreeNode *p) {
+  if (NULL == p->left) {
+    // fprintf(stderr, "left is null\n");
+    proot = replace(proot, p, p->right);
+    return proot;
+  }
+  if (NULL == p->right) {
+    proot = replace(proot, p, p->left);
+    return proot;
+  }
+  TreeNode *succ = successor(p);
+  if (succ == p->right) {
+    // The successor of p is the right node of it.
+    // Set the successor's left (successor has no left) as p's left.
+    succ->left = p->left;
+    succ->left->par = succ;
+
+    // Replace p with successor.
+    proot = replace(proot, p, succ);
+  } else {
+    // fprintf(stderr, "p: %d\n", *p->ptrkey);
+    // fprintf(stderr, "succ: %d\n", *succ->ptrkey);
+    static KeyType buf;
+    // Buffer the value of successor.
+    keycpy(&buf, succ->ptrkey);
+    // fprintf(stderr, "buf: %d\n", buf);
+    // fprintf(stderr, "succ->right: %p\n", succ->right);
+    // 
+    // Replace successor with its right.
+    proot = replace(proot, succ, succ->right);
+    // Set p's value as buffered value.
+    keycpy(p->ptrkey, &buf);
+  }
+  return proot;
+}

@@ -11,6 +11,7 @@ typedef struct TreeNode {
 } TreeNode;
 
 TreeNode *addnode(TreeNode *proot, KeyType *ptrkey);
+TreeNode *delnode(TreeNode *proot, TreeNode *p);
 
 // recursion version
 void puttree(TreeNode *proot);
