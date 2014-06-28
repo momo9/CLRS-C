@@ -171,3 +171,49 @@ TreeNode *nodemax(TreeNode *p) {
 void putnode(TreeNode *n) {
   keyput(n);
 }
+
+TreeNode *search(TreeNode *pt, KeyType *p) {
+  if (NULL == pt) {
+    return NULL;
+  }
+  // fprintf(stderr, "%d\n", *pt->ptrkey);
+  int cmp;
+  if (0 == (cmp = keycmp(p, pt->ptrkey))) {
+    return pt;
+  }
+  if (cmp < 0) {
+    return search(pt->left, p);
+  } else {
+    return search(pt->right, p);
+  }
+}
+
+TreeNode *predecessor(TreeNode *pn) {
+  if (NULL != pn->left) {
+    return nodemax(pn->left);
+  } else {
+    TreeNode *p;
+    while (NULL != (p = pn->par)) {
+      if (p->right == pn) {
+        return p;
+      }
+      pn = p;
+    }
+    return NULL;
+  }
+}
+
+TreeNode *successor(TreeNode *pn) {
+  if (NULL != pn->right) {
+    return nodemin(pn->right);
+  } else {
+    TreeNode *p;
+    while (NULL != (p = pn->par)) {
+      if (p->left == pn) {
+        return p;
+      }
+      pn = p;
+    }
+    return NULL;
+  }
+}

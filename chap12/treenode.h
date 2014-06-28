@@ -31,4 +31,9 @@ TreeNode *nodemax(TreeNode *p);
 
 void putnode(TreeNode *n);
 
+TreeNode *search(TreeNode *pt, KeyType *p);
+
+TreeNode *predecessor(TreeNode *pn);
+TreeNode *successor(TreeNode *pn);
+
 #endif
